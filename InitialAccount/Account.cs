@@ -3,9 +3,9 @@
 public class Account
 {
     private int id;
-    private decimal balance;
+    protected decimal balance;
     private string owner;
-    private int numXact = 0;
+    protected int numXact = 0;
     public Account(decimal balance, string owner, int id)
         : this(balance, owner)
     {
