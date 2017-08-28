@@ -7,14 +7,16 @@ public class TestAccount
         Account acc;
         acc = new Account(100, "Amy", 1);
         ShowAccount("Account", acc);
-        acc = new Account(200, "Bob");
-        ShowAccount("Account", acc);
-        acc = new Account(300);
-        ShowAccount("Account", acc);
-        acc = new Account();
-        ShowAccount("Account", acc);
+        CheckingAccount chk;
+        chk = new CheckingAccount(400, "David", 4);
+        ShowAccount("CheckingAccount", chk);
     }
     private static void ShowAccount(string caption, Account acc)
+    {
+        Console.WriteLine("{0}", caption);
+        Console.WriteLine(acc.GetStatement());
+    }
+    private static void ShowAccount(string caption, CheckingAccount acc)
     {
         Console.WriteLine("{0}", caption);
         Console.WriteLine(acc.GetStatement());
